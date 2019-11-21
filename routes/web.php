@@ -13,4 +13,4 @@
 
 Route::get('/', 'UserController@index');
 
-Route::get('/{id}', 'UserController@show');
+Route::get('/user/{id}', 'UserController@show');

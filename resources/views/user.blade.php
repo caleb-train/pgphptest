@@ -9,5 +9,5 @@
 @endsection
 
 @section('body')
-    <p>{{ nl2br($user->comments) }}</p>
+    <p>{!! nl2br($user->comments) !!}</p>
 @endsection

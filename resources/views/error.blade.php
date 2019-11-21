@@ -9,5 +9,9 @@
 @endsection
 
 @section('body')
-    <p>{{ nl2br($user->body) }}</p>
+    <p>{!! nl2br($user->body) !!}</p>
+@endsection
+
+@section('link')
+<a href="/user/1">Try Again</a>
 @endsection

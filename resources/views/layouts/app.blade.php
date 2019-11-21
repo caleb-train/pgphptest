@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>User Card - {{ $user->name }}</title>
+    <title>User Card - {{ $user->name ?? '' }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
@@ -12,8 +12,9 @@
             <section id="main">
                 <header>
                     @yield('image')
-                    @yield('title')
-                    @yield('body')
+                    <h1>@yield('title')</h1>
+                    <p>@yield('body')</p>
+                    <p>@yield('link')</p>
                 </header>
             </section>
             <footer id="footer">
