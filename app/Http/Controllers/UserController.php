@@ -11,7 +11,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $users = User::all();
+        return view('welcome')->with('users', $users);
     }
 
     public function show($userId)
